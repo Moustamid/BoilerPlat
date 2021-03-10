@@ -24,7 +24,7 @@ a {
 }
 
 .Next {
-  height: 15rem;
+  height: 10rem;
   margin-bottom: 1rem;
 }
 
@@ -54,8 +54,6 @@ h1 {
 
 .google-icon {
   position: absolute;
-  /* margin-top: 11px;
-  margin-left: 11px; */
   width: 18px;
   height: 18px;
   top: 50%;
@@ -73,9 +71,9 @@ h1 {
 }
 
 .google-btn:hover {
-  box-shadow: 0 0 6px #4285f4;
+  box-shadow: 0 0 3px #4285f4;
 }
 
 .google-btn:active {
-  box-shadow: 0 0 6px #1669f2;
+  box-shadow: 0 0 3px #1669f2;
 }

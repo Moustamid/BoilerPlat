@@ -9,21 +9,16 @@ module.exports = {
   },
 };
 
-/*
+// NOTE:
 
-NOTE: 
+//- http://localhost:5000/auth/google :
+// will not work by def in developement :
 
-- http://localhost:5000/auth/google : 
- will not work in by def in developement : 
+//-Ajax request : on same domain ok ...
+// network request to http://localhost:5000/ is a CORS request
 
-- Solution :
- https://nextjs.org/docs/api-reference/next.config.js/rewrites
+//! Solution : documentation
+// https://nextjs.org/docs/api-reference/next.config.js/rewrites
 
-- in production : the react server does not exist anymore ...
-http://localhost:5000/auth/google/callback?
-code=4
-%2F0AY0e-g4N2gzXCTL0uV56L9Suf0d66q2NPoOyZJqNDCytxGpUcK4vB8CyfLW9Uc4ekgYNXA
-&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent#
-
-
-*/
+//- in production : the react server does not exist anymore ...
+// we wll be making request on the same domain

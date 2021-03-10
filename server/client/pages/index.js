@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div className="container">
       <img className="Next" src="/next.svg" />
-      <h1>Welcom to the Nextjs client of my boilerplate</h1>
 
       <div class="google-btn">
         <div class="google-icon-wrapper">
