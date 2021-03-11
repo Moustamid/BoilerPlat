@@ -63,7 +63,9 @@ authRoutes(app);
 
 // REMEMBER: delete this route :
 app.get('/', (req, res) => {
-  res.send(`<h1> MERN boilerplate </h1>`);
+  res.send(
+    `<h2>Express Server running on port ${PORT} in ${process.env.NODE_ENV} mode ...  👩‍💻</h2>`
+  );
 });
 
 // SECTION: Starting the server ( Express asking Nodejs to listen on the Port specified ) :
