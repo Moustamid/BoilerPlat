@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 //- styled components :
 import {
   Nav,
@@ -45,24 +45,25 @@ const Navbar = () => {
       <Container s={2} e={12}>
         {/* Menu logo */}
         <LogoBox>
-          <Link href="/">
-            <Logo src="/next.svg" alt="logo" />
-          </Link>
+          <Ancker href="/">
+            {/* <Logo src="/logo.png" alt="logo" /> */}
+            LOGO
+          </Ancker>
         </LogoBox>
         {/* Links */}
         <NavMenu>
           {navLinks.map((link, index) => (
             <NavItem key={index}>
-              <Link href={link.path}>
+              {/* <Ancker href={link.path}>
                 <Ancker active={active}>{link.title}</Ancker>
-              </Link>
+              </Ancker> */}
             </NavItem>
           ))}
         </NavMenu>
         {/* Humburger Menu  */}
         {/* Popup Button */}
         <PopupButton active={active}>
-          <a href="#popup">Order Now</a>
+          <a href="/">Order Now</a>
         </PopupButton>
       </Container>
     </Nav>

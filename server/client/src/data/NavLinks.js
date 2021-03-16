@@ -1,25 +1,25 @@
 export const navLinks = [
   {
-    title: 'About',
-    path: 'about',
+    title: 'link-1',
+    path: '/',
     span: '02',
     spanText: 'about',
   },
   {
-    title: 'Servises',
-    path: 'servises',
+    title: 'link-2',
+    path: '/',
     span: '03',
     spanText: 'servises',
   },
   {
-    title: 'Products',
-    path: 'products',
+    title: 'link-3',
+    path: '/',
     span: '04',
     spanText: 'gallery',
   },
   {
-    title: 'Testimonials',
-    path: 'testimonials',
+    title: 'link-4',
+    path: '/',
     span: '05',
     spanText: 'Popular',
   },

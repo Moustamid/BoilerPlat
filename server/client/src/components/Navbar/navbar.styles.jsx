@@ -2,16 +2,14 @@ import styled from 'styled-components';
 //-Layouts :
 import FullWidthSection from '../../Layout/FullWidthSection';
 import Row from '../../Layout/Row';
-import Button from '../Button';
+// import Button from '../Button';
 
 export const Nav = styled(FullWidthSection)`
   position: fixed;
   height: 65px;
   width: 100vw;
-  padding: 10px 0;
   z-index: 999;
-  background-color: ${({ active }) =>
-    active ? ({ theme }) => theme.colors.white : 'transparent'};
+  background-color: ${({ theme }) => theme.colors.black};
   transition: all 0.8s ease;
 `;
 
@@ -26,7 +24,7 @@ export const Container = styled(Row)`
 export const LogoBox = styled.div``;
 
 export const Logo = styled.img`
-  height: 6.5rem;
+  height: 11rem;
 `;
 
 export const NavMenu = styled.ul`
@@ -50,7 +48,10 @@ export const Ancker = styled.a`
   font-weight: 400;
   letter-spacing: 2px;
   line-height: 2.6rem;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ active }) =>
+    active
+      ? ({ theme }) => theme.colors.primary
+      : ({ theme }) => theme.colors.white};
 
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -67,19 +68,24 @@ export const PopupButton = styled.button`
   cursor: pointer;
   padding: 0.8rem 1.9rem;
   border: none;
-  /* border: 2px solid #000; */
   border-radius: 2rem;
   font-size: 1.5rem;
   letter-spacing: 1.2px;
   transition: all 0.2s;
   position: relative;
 
-  background: ${({ theme }) => theme.colors.yellow};
+  background: ${({ active }) =>
+    active
+      ? ({ theme }) => theme.colors.secondary
+      : 'rgba(255, 255, 255, 0.08)'};
 
   a {
     text-decoration: none;
     font-family: ${({ theme }) => theme.typography.Poppins};
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ active }) =>
+      active
+        ? ({ theme }) => theme.colors.primary
+        : ({ theme }) => theme.colors.white};
   }
 
   &:before {
@@ -100,9 +106,8 @@ export const PopupButton = styled.button`
 
   &:hover {
     transform: translateY(-3px);
-    background: ${({ theme }) => theme.colors.yellow};
-    border: none;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: ${({ theme }) => theme.colors.yellow};
   }
 
   &:active {
