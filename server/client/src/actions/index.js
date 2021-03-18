@@ -8,6 +8,6 @@ export const fetchUser = () => async (dispatch) => {
   //* Dispatch manually the action to all our reduces ...
   dispatch({
     type: FETCH_USER,
-    payload: res,
+    payload: res.data,
   });
 };

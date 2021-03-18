@@ -1,8 +1,8 @@
 const heroSlider = [
   {
     id: 1,
-    title: 'Slide-1',
-    subtitle: 'subtitle',
+    title: 'MERN Boilerplate',
+    subtitle: 'React NodeJs Express MongoDB',
     path: '/',
     btnLabel: 'Shop Now',
     image: '/images/s-1.jpg',
@@ -10,8 +10,8 @@ const heroSlider = [
   },
   {
     id: 2,
-    title: 'Slide-2',
-    subtitle: 'subtitle',
+    title: 'More to Come',
+    subtitle: 'features',
     path: '/',
     btnLabel: 'Shop Now',
     image: '/images/s-2.jpg',
@@ -19,8 +19,8 @@ const heroSlider = [
   },
   {
     id: 3,
-    title: 'Slide-3',
-    subtitle: 'subtitle',
+    title: 'Advance NodeJs',
+    subtitle: 'Jest Redis AWS',
     path: '/',
     btnLabel: 'Shop Now',
     image: '/images/s-3.jpg',

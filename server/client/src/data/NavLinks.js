@@ -11,4 +11,8 @@ export const navLinks = [
     title: 'SurveyNew',
     path: '/SurveyNew',
   },
+  {
+    title: 'Contact',
+    path: '/Contact',
+  },
 ];

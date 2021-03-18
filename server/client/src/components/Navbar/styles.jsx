@@ -9,7 +9,7 @@ export const Nav = styled(FullWidthSection)`
   height: 65px;
   width: 100vw;
   z-index: 999;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: transparent;
   transition: all 0.8s ease;
 `;
 
@@ -24,13 +24,18 @@ export const Container = styled(Row)`
 export const LogoBox = styled.div``;
 
 export const Logo = styled.img`
-  height: 5.5rem;
+  height: 5rem;
 `;
 
 export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   @media ${(props) => props.theme.breakpoints.down.md} {
     opacity: 0;
@@ -39,7 +44,9 @@ export const NavMenu = styled.ul`
   }
 `;
 export const NavItem = styled.li`
-  margin-left: 4rem;
+  &:not(:first-child) {
+    margin-left: 4rem;
+  }
 `;
 
 export const Ancker = styled(Link)`
@@ -53,7 +60,9 @@ export const Ancker = styled(Link)`
   height: 100%;
   transition: all 0.2s ease;
   cursor: pointer;
+
   color: ${({ theme }) => theme.colors.white};
+
   &:hover {
     color: ${({ theme }) => theme.colors.yellow};
   }

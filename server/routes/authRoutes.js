@@ -12,13 +12,20 @@ export const authRoutes = (app) => {
 
   //-  client comming from google OAuth i.e 'our GoogleStrategy function' :
 
-  app.get('/auth/google/callback', passport.authenticate('google'));
+  app.get(
+    '/auth/google/callback',
+    passport.authenticate('google'),
+    (req, res) => {
+      //.user is successful login with Google
+      res.redirect('/');
+    }
+  );
 
   //- logout route :
 
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.send(req.user);
+    res.redirect('/');
   });
 
   //- client making a request  , client already authenticated with the google flow

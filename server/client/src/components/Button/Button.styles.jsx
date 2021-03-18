@@ -8,13 +8,14 @@ export const AnchorTag = styled.a`
     display: inline-block;
     letter-spacing: 1.2px;
     text-transform: uppercase;
-    padding: 1.5rem 4rem;
+    padding: 0.7rem 4rem;
     border-radius: 10rem;
     position: relative;
     overflow: hidden;
-    font-size: ${({ theme }) => theme.typography.dfs};
-    border: 2px solid ${({ color }) => color};
+    font-size: ${({ theme }) => theme.typography.Poppins};
+    border: 2px solid #fff;
     cursor: pointer;
+    color: #fff;
   }
 `;
 

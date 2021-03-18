@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
+//.Redux:
+import { connect } from 'react-redux';
 //- styled components :
 import {
   Nav,
@@ -9,14 +10,16 @@ import {
   NavItem,
   Ancker,
   Logo,
-} from './navbar.styles';
+  PopupButton,
+} from './styles.jsx';
 //-Links Data :
 import { navLinks } from '../../data/NavLinks';
 //-Compoenents :
 import GoogleBtn from '../GoogleBtn';
+import Button from '../Button';
 
-const Navbar = () => {
-  // -Hooks :
+const Navbar = ({ auth }) => {
+  //. SECTION: Hooks :
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -29,7 +32,24 @@ const Navbar = () => {
     };
   }, []);
 
-  // -helpers :
+  //. SECTION: Helpers:
+
+  const renderContent = () => {
+    switch (auth) {
+      case null:
+        return 'Still loading';
+      case false:
+        return <GoogleBtn />;
+
+      default:
+        return (
+          <PopupButton active={active}>
+            <a href="/api/logout">Logout</a>
+          </PopupButton>
+        );
+    }
+  };
+
   const handleScroll = () => {
     const customScrollHeight = 600;
 
@@ -59,14 +79,17 @@ const Navbar = () => {
         </NavMenu>
         {/* Humburger Menu  */}
         {/* Popup Button */}
-        {/* <PopupButton active={active}>
-          <a href="/">Order Now</a>
-        </PopupButton> */}
+
         {/* Google Btn */}
-        <GoogleBtn />
+        {/* */}
+        {renderContent()}
       </Container>
     </Nav>
   );
 };
 
-export default Navbar;
+const mapStateToProps = ({ auth }) => {
+  return { auth };
+};
+
+export default connect(mapStateToProps)(Navbar);

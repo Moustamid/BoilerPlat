@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-// import { Overlay } from '../../styles/utilies.styles';
 
 //-HeroSlider : the wrapper isolate the slide from the Grid system
 export const Slider = styled.div`
@@ -9,6 +8,7 @@ export const Slider = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  height: 70vh;
 `;
 
 export const Slide = styled.div`
@@ -25,9 +25,9 @@ export const Slide = styled.div`
     left: 0;
     background: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.1) 0%,
-      rgba(0, 0, 0, 0.1) 50%,
-      rgba(0, 0, 0, 0.1) 100%
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.2) 100%
     );
   }
 `;

@@ -8,7 +8,7 @@ import {
   Content,
   ButtonRight,
   ButtonLeft,
-} from './slider.styles';
+} from './styles.jsx';
 //-Components :
 
 //-data :
@@ -59,7 +59,7 @@ const SliderComponent = () => {
                 <Img src={slide.image} alt={slide.alt} />
                 <Content>
                   <h1>{slide.title}</h1>
-                  <p>Subtitle</p>
+                  <p>{slide.subtitle}</p>
                 </Content>
               </wrapper>
             )}
