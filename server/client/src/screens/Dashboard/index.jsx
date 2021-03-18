@@ -1,11 +1,13 @@
 import React from 'react';
-import { Center, Title } from './styles';
+import { Center, Title, Page } from './styles';
 
 const Dashboard = () => {
   return (
-    <Center>
-      <Title>Dashboard</Title>
-    </Center>
+    <Page>
+      <Center>
+        <Title>Dashboard</Title>
+      </Center>
+    </Page>
   );
 };
 

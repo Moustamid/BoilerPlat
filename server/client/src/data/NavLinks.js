@@ -8,11 +8,11 @@ export const navLinks = [
     path: '/dashboard',
   },
   {
-    title: 'SurveyNew',
-    path: '/SurveyNew',
+    title: 'Survey',
+    path: '/survey',
   },
   {
-    title: 'Contact',
-    path: '/Contact',
+    title: 'Login',
+    path: '#',
   },
 ];

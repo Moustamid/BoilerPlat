@@ -1,11 +1,13 @@
 import React from 'react';
-import { Center, Title } from './styles';
+import { Center, Title, Page } from './styles';
 
 const SurveyNew = () => {
   return (
-    <Center>
-      <Title>SurveyNew</Title>
-    </Center>
+    <Page>
+      <Center>
+        <Title>SurveyNew</Title>
+      </Center>
+    </Page>
   );
 };
 

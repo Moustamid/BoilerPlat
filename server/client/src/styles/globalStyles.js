@@ -28,6 +28,7 @@ export const GlobalStyles = createGlobalStyle`
     html {
       font-size: 62.5%;
       min-height: 100%;
+      background : #fcfcfc;
     }
     
     body {
@@ -36,6 +37,6 @@ export const GlobalStyles = createGlobalStyle`
       font-weight: 400;
       font-style: normal;
       line-height: 2.4rem;
-      background-color: #fff;
+      background-color: #bfbfbf;
     }
 `;

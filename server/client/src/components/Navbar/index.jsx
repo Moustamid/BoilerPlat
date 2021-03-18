@@ -65,7 +65,7 @@ const Navbar = ({ auth }) => {
       <Container s={2} e={12}>
         {/* Menu logo */}
         <LogoBox>
-          <Ancker to="/">
+          <Ancker to={auth ? '/survey' : '/'}>
             <Logo src="/logo.png" alt="logo" />
           </Ancker>
         </LogoBox>
