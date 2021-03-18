@@ -23,7 +23,7 @@ export const authRoutes = (app) => {
 
   //- client making a request  , client already authenticated with the google flow
 
-  app.get('/api/user', (req, res) => {
+  app.get('/api/current_user', (req, res) => {
     res.send(req.user);
   });
 };

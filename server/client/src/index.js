@@ -4,6 +4,7 @@ import reactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import Reducers from './reducers';
+import reduxThunk from 'redux-thunk';
 //-Stules :
 import { ThemeProvider } from 'styled-components';
 import Theme from './styles/theme';
@@ -12,7 +13,7 @@ import { GlobalStyles } from './styles/globalStyles';
 import App from './components/App';
 
 // SECTION:
-const store = createStore(Reducers, {}, applyMiddleware());
+const store = createStore(Reducers, {}, applyMiddleware(reduxThunk));
 
 // SECTION:
 reactDOM.render(

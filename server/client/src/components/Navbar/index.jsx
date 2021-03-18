@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react';
-// import Link from 'next/link';
+
 //- styled components :
 import {
   Nav,
   Container,
   LogoBox,
-  Logo,
   NavMenu,
   NavItem,
   Ancker,
-  PopupButton,
+  Logo,
 } from './navbar.styles';
 //-Links Data :
 import { navLinks } from '../../data/NavLinks';
+//-Compoenents :
+import GoogleBtn from '../GoogleBtn';
 
 const Navbar = () => {
   // -Hooks :
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    console.log(active);
     //    effect
     window.addEventListener('scroll', handleScroll);
 
@@ -45,26 +45,25 @@ const Navbar = () => {
       <Container s={2} e={12}>
         {/* Menu logo */}
         <LogoBox>
-          <Ancker href="/">
-            {/* <Logo src="/logo.png" alt="logo" /> */}
-            LOGO
+          <Ancker to="/">
+            <Logo src="/logo.png" alt="logo" />
           </Ancker>
         </LogoBox>
         {/* Links */}
         <NavMenu>
           {navLinks.map((link, index) => (
-            <NavItem key={index}>
-              {/* <Ancker href={link.path}>
-                <Ancker active={active}>{link.title}</Ancker>
-              </Ancker> */}
+            <NavItem key={index} active={active}>
+              <Ancker to={link.path}>{link.title}</Ancker>
             </NavItem>
           ))}
         </NavMenu>
         {/* Humburger Menu  */}
         {/* Popup Button */}
-        <PopupButton active={active}>
+        {/* <PopupButton active={active}>
           <a href="/">Order Now</a>
-        </PopupButton>
+        </PopupButton> */}
+        {/* Google Btn */}
+        <GoogleBtn />
       </Container>
     </Nav>
   );

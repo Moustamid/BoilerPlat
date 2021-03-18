@@ -2,7 +2,7 @@ import styled from 'styled-components';
 //-Layouts :
 import FullWidthSection from '../../Layout/FullWidthSection';
 import Row from '../../Layout/Row';
-// import Button from '../Button';
+import { Link } from 'react-router-dom';
 
 export const Nav = styled(FullWidthSection)`
   position: fixed;
@@ -24,7 +24,7 @@ export const Container = styled(Row)`
 export const LogoBox = styled.div``;
 
 export const Logo = styled.img`
-  height: 11rem;
+  height: 5.5rem;
 `;
 
 export const NavMenu = styled.ul`
@@ -39,26 +39,21 @@ export const NavMenu = styled.ul`
   }
 `;
 export const NavItem = styled.li`
-  margin-left: 1.2rem;
+  margin-left: 4rem;
 `;
 
-export const Ancker = styled.a`
+export const Ancker = styled(Link)`
   font-family: ${({ theme }) => theme.typography.Poppins};
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 2px;
   line-height: 2.6rem;
-  color: ${({ active }) =>
-    active
-      ? ({ theme }) => theme.colors.primary
-      : ({ theme }) => theme.colors.white};
-
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
   height: 100%;
   transition: all 0.2s ease;
   cursor: pointer;
-
+  color: ${({ theme }) => theme.colors.white};
   &:hover {
     color: ${({ theme }) => theme.colors.yellow};
   }

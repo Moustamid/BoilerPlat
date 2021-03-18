@@ -1,25 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-//-components :
+//-Screens :
 import Navbar from '../components/Navbar';
-import Slider from '../components/slider';
+import Landing from '../screens/Landing';
+import Dashboard from '../screens/Dashboard';
+import SurveyNew from '../screens/SurveyNew';
+//.Redux :
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-const Header = () => <h2>Header</h2>;
-const Dashboard = () => <h2>Dashboard</h2>;
-const SurveyNew = () => <h2>SurveyNew</h2>;
-const Landing = () => <h2>Landing</h2>;
+class App extends Component {
+  //. Life cycle methods :
+  componentDidMount() {
+    console.log(this.props);
+    this.props.fetchUser();
+  }
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <div>
-        <Navbar />
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/surveyNew" component={SurveyNew} />
-      </div>
-    </BrowserRouter>
-  );
-};
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Navbar />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/surveyNew" component={SurveyNew} />
+        </div>
+      </BrowserRouter>
+    );
+  }
+}
 
-export default App;
+export default connect(null, actions)(App);
